@@ -10,7 +10,7 @@ import Register from '../page/Register'
 export default function Routers() {
   return (
   <Routes>
-    <Route path='/' element={<Navigate to='/home'/>}/>
+    <Route path='/' element={<Navigate to='/'/>}/>
     <Route path='/home' element={<Home/>}/>
     <Route path='/foods' element={<AllFoods/>}/>
     <Route path='/cart' element={<Cart/>}/>
