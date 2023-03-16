@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+@layer components{
+    .anime{
+        @apply transition duration-150 ease-out  hover:ease-in
+    }
+  
+    .hoverBar{
+        @apply  cursor-pointer font-semibold text-[16px] hover:text-rose-900 hover:transform transition-all hover:font-semibold
+    }
+    .boxCenter{
+        @apply  items-center justify-center flex
+    }
+    .boxStart{
+        @apply  items-start justify-start flex
+    }
+    .noneBox{
+        @apply  md:visible invisible
+
+    }
+    .menuBox{
+        @apply  z-20  invisible    absolute w-full max-h-full h-full
+    }
+    .menuBoxNone{
+        @apply  visible 
+    }
+    .menuBasketNone{
+        @apply  visible
+    }
+    .footerText{
+        @apply  font-semibold text-[16px] hover:border-b-white cursor-pointer hover:border-b-2 border-b-2 anime hover:ease-in border-rose-900
+    }
+    .footerFont{
+        @apply  font-semibold text-[14px]
+    }
+    .footerColor{
+        @apply bg-rose-900 text-white
+    }
+    .colorText{
+        @apply text-rose-900
+    }
+    
+    
+    .btn{
+        @apply transition duration-150 ease-out hover:ease-in rounded-md hover:border-rose-900 border hover:font-semibold font-semibold  bg-rose-900 text-white p-2 hover:text-rose-900 hover:bg-white cursor-pointer
+    }
+    
+
+    .socialMedia{
+        @apply border translate-y-0 hover:-translate-y-2 rounded p-[1px] transition duration-150 ease-out hover:ease-in  cursor-pointer bg-rose-900 text-white font-semibold  hover:text-rose-900 hover:bg-white hover:font-semibold
+    }
+    .containerBox{
+        @apply  px-3 lg:px-14  
+    }
+    .categoriesBox{
+        @apply  anime  p-2 gap-2 cursor-pointer hover:-translate-y-2 -translate-y-0 border border-rose-800 bg-rose-800 rounded boxCenter
+    }
+    .colorGray{
+        @apply text-gray-600 text-[13px] 
+    }
+    .colorPage{
+        @apply  font-bold font-mono text-[28px] text-rose-900
+    }
+    .countBtnRight{
+        @apply rounded-r-md rounded-none btn  py-[1px] px-[5px] 
+    }
+    .countBtnLeft{
+        @apply  rounded-l-md  btn py-[1px] px-[5px]  rounded-none
+    }
+    .searchBtn{
+        @apply  bg-rose-900 text-white  cursor-pointer
+    }
+    .paginationBttns{
+        @apply  p-2 w-full boxCenter gap-5 border 
+    }
+   
+    .paginationBttns a{
+       @apply px-3 py-1 transition duration-150 ease-out hover:ease-in rounded-md hover:border-rose-900 border hover:font-semibold font-semibold  bg-rose-900 text-white  hover:text-rose-900 hover:bg-white cursor-pointer
+    }
+   .calc{
+    width: calc(100% - 108px);;
+   }
+.headerBox{
+     box-shadow: 0 0px 18px -5px gray;
+}
+  
+    
+
+    
+   
+    
+}
