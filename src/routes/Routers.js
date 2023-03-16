@@ -10,8 +10,8 @@ import Register from '../page/Register'
 export default function Routers() {
   return (
   <Routes>
-    <Route path='/' element={<Navigate to='/home'/>}/>
-    <Route path='/home' element={<Home/>}/>
+    <Route path='/' element={<Navigate to='/ReactReduxRepo'/>}/>
+    <Route path='/ReactReduxRepo' element={<Home/>}/>
     <Route path='/foods' element={<AllFoods/>}/>
     <Route path='/cart' element={<Cart/>}/>
     <Route path='/checkout' element={<Checkout/>}/>

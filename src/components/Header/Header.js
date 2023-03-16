@@ -52,7 +52,7 @@ export default function Header() {
             </div>
           </div>
           <div className="flex gap-3 ">
-            <div className=" relative noneBox ">
+            <div className=" relative  ">
               <SlBasket
                 size={20}
                 className="hoverBar "
@@ -62,7 +62,7 @@ export default function Header() {
                 {totalCount}
               </span>
             </div>
-            <AiOutlineUser size={20} className="hoverBar noneBox" />
+            <AiOutlineUser size={20} className="hoverBar noneBox md:w-fit w-0" />
             <AiOutlineMenu
               onClick={menuToggle}
               size={20}
