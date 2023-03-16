@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ReactReduxRepo/static/css/main.4b6a272c.css",
-    "main.js": "/ReactReduxRepo/static/js/main.c6087d56.js",
+    "main.js": "/ReactReduxRepo/static/js/main.fe43bea7.js",
     "static/media/pizza.jpg": "/ReactReduxRepo/static/media/pizza.ef4658b6b55e68adcbaa.jpg",
     "static/media/network.png": "/ReactReduxRepo/static/media/network.7deb539d0303413c1704.png",
     "static/media/chicken.jpeg": "/ReactReduxRepo/static/media/chicken.b6641c0f19b578eccd88.jpeg",
@@ -36,10 +36,10 @@
     "static/media/slick.woff": "/ReactReduxRepo/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ReactReduxRepo/index.html",
     "main.4b6a272c.css.map": "/ReactReduxRepo/static/css/main.4b6a272c.css.map",
-    "main.c6087d56.js.map": "/ReactReduxRepo/static/js/main.c6087d56.js.map"
+    "main.fe43bea7.js.map": "/ReactReduxRepo/static/js/main.fe43bea7.js.map"
   },
   "entrypoints": [
     "static/css/main.4b6a272c.css",
-    "static/js/main.c6087d56.js"
+    "static/js/main.fe43bea7.js"
   ]
 }
