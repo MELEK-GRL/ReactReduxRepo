@@ -39,7 +39,7 @@ export default function Products() {
         <button
           className={`footerText boxCenter  text-white gap-1 text-lg  ${
             category == "ALL"
-              ? "bg-white p-1 rounded text-rose-900"
+              ? "border-white border-b p-1  text-rose-900"
               : "footerText"
           }`}
           onClick={() => setCategory("ALL")}
