@@ -49,7 +49,7 @@ export default function Products() {
         <button
           className={`footerText boxCenter  text-white gap-1 text-lg  ${
             category == "BURGER"
-              ? "bg-white p-1 rounded text-rose-900"
+              ?  "border-white border-b p-1  text-rose-900"
               : "footerText"
           }`}
           onClick={() => setCategory("BURGER")}
@@ -64,7 +64,7 @@ export default function Products() {
         <button
           className={`footerText boxCenter  text-white gap-1 text-lg  ${
             category == "PIZZA"
-              ? "bg-white p-1 rounded text-rose-900"
+              ?  "border-white border-b p-1  text-rose-900"
               : "footerText"
           }`}
           onClick={() => setCategory("PIZZA")}
@@ -79,7 +79,7 @@ export default function Products() {
         <button
           className={`footerText boxCenter  text-white gap-1 text-lg  ${
             category == "BREAD"
-              ? "bg-white p-1 rounded text-rose-900"
+              ?  "border-white border-b p-1  text-rose-900"
               : "footerText"
           }`}
           onClick={() => setCategory("BREAD")}
