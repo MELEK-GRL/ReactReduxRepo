@@ -9,7 +9,14 @@
     .anime{
         @apply transition duration-150 ease-out  hover:ease-in
     }
-  
+    
+
+    .headerBox{
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
+    }
+    .headerChange{
+        @apply headerBox
+    }
     .hoverBar{
         @apply  cursor-pointer font-semibold text-[16px] hover:text-rose-900 hover:transform transition-all hover:font-semibold
     }
@@ -85,10 +92,7 @@
    .calc{
     width: calc(100% - 108px);;
    }
-.headerBox{
-     box-shadow: 0 0px 18px -5px gray;
-}
-  
+
     
 
     

@@ -9,21 +9,42 @@ import { useRef } from "react";
 import { useSelector } from "react-redux";
 import BasketItem from "../UI/BasketItem";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 
 export default function Header() {
   const menuRef = useRef();
   const basketRef = useRef();
-
+  const headerRef=useRef(null)
   const menuToggle = () => menuRef.current.classList.toggle("menuBoxNone");
   const basketToggle = () =>
     basketRef.current.classList.toggle("menuBasketNone");
 
   const { totalCount ,cartItems,totalAmount} = useSelector((state) => state.cart);
+  
+ 
+
+ 
+  const headerBox=()=>{
+    window.addEventListener('scroll',()=>{
+      if(document.body.scrollTop>80||document.documentElement.scrollTop>80){
+        headerRef.current.classList.add('headerChange')
+      }
+      else{
+        headerRef.current.classList.remove('headerChange')
+      }
+    })
+  }
+
+ 
+  useEffect(()=>{
+    headerBox()
+    return window.removeEventListener('scrool',headerBox)
+  })
 
   return (
-    <div className="flex  w-full  z-30 fixed bg-white ">
-      <div className="boxCenter justify-between  w-full p-2 headerBox">
+    <div  ref={headerRef} className="flex  w-full  z-30 fixed bg-white ">
+      <div className="boxCenter justify-between  w-full p-2 ">
         <div className=" w-full boxCenter  justify-between containerBox">
           <div className="boxCenter flex-col gap-1 boxCenter">
            <Link to='/'>
@@ -73,10 +94,10 @@ export default function Header() {
       </div>
       <div className="flex menuBox   w-full fixed" ref={menuRef}>
         <div
-          className="w-[50%] p-3  md:w-[65%] lg:w-[80%] flex h-full   bg-black bg-opacity-25 "
+          className="w-[40%] p-3  md:w-[65%] lg:w-[80%] flex h-full   bg-black bg-opacity-25 "
           onClick={menuToggle}
         ></div>
-        <div className="w-[50%] p-3  md:w-[35%] lg:w-[20%] flex h-full  bg-white ">
+        <div className="w-[60%] p-3  md:w-[35%] lg:w-[20%] flex h-full  bg-white ">
           <RxCross2 size={20} className="cursor-pointer" onClick={menuToggle} />
           <div className="flex w-full  items-center justify-center">
             <div className="flex flex-col  p-2 w-full gap-12">
@@ -110,11 +131,10 @@ export default function Header() {
       </div>
 
       <div className="flex menuBox   w-full fixed" ref={basketRef}>
-        <div
-          className="w-[50%] p-3  md:w-[65%] lg:w-[80%] flex h-full   bg-black bg-opacity-25 "
+        <div className="w-[40%] p-3  md:w-[65%] lg:w-[80%] flex h-full   bg-black bg-opacity-25 "
           onClick={basketToggle}
         ></div>
-        <div className="w-[50%] p-3  gap-8 flex-col md:w-[35%] lg:w-[20%] flex h-full  bg-white ">
+        <div className="w-[60%] p-3  gap-8 flex-col md:w-[35%] lg:w-[20%] flex h-full  bg-white ">
           <div className="w-full flex">
             <RxCross2
               size={20}
@@ -124,7 +144,7 @@ export default function Header() {
           </div>
           <div className=" w-full  boxStart flex-col justify-between">
             <div className="flex w-full justify-between gap-4 flex-col">
-              <div className="w-full flex flex-col h-[580px] gap-3  overflow-y-auto  scroll-none  ">
+              <div className="w-full flex flex-col h-[540px] gap-3  overflow-y-auto  scroll-none  ">
                 <div className="boxCenter w-full flex-col   gap-2 ">
                   {cartItems.length == 0 ? (
                     <h5 className="font-semibold text-lg text-rose-900">Your Cart Is Empty</h5>
@@ -136,11 +156,12 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="w-full flex items-center justify-between  bg-rose-900 p-2">
-                <span className="text-sm text-white">
+              <div className="w-full sm:gap-0 gap-2 flex flex-col sm:flex-row items-center justify-between  bg-rose-900 p-2">
+              <Link onClick={basketToggle}  to='/login' className="btn text-[15px] p-1">CheckOut</Link>
+                <span className="text-md text-white">
                   SubTotal:<span>{totalAmount}$</span>
                 </span>
-                <Link to='/login' className="btn p-1">CheckOut</Link>
+               
               </div>
             </div>
           </div>
