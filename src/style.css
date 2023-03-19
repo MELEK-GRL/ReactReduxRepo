@@ -1068,6 +1068,10 @@ video {
   height: 100%;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .max-h-14 {
   max-height: 3.5rem;
 }
@@ -1254,6 +1258,10 @@ video {
   gap: 2rem;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -1270,8 +1278,18 @@ video {
   overflow-x: scroll;
 }
 
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .text-clip {
   text-overflow: clip;
+}
+
+.whitespace-normal {
+  white-space: normal;
 }
 
 .whitespace-nowrap {
@@ -1472,10 +1490,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-\[14px\] {
-  font-size: 14px;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1600,12 +1614,40 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:h-\[580px\] {
+    height: 580px;
+  }
+
+  .sm\:h-\[570px\] {
+    height: 570px;
+  }
+
+  .sm\:h-\[560px\] {
+    height: 560px;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
+
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
   }
 
   .sm\:gap-0 {

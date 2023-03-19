@@ -144,7 +144,7 @@ export default function Header() {
           </div>
           <div className=" w-full  boxStart flex-col justify-between">
             <div className="flex w-full justify-between gap-4 flex-col">
-              <div className="w-full flex flex-col h-[540px] gap-3  overflow-y-auto  scroll-none  ">
+              <div className="w-full flex flex-col h-[540px] sm:h-[570px] gap-3  overflow-y-auto  scroll-none  ">
                 <div className="boxCenter w-full flex-col   gap-2 ">
                   {cartItems.length == 0 ? (
                     <h5 className="font-semibold text-lg text-rose-900">Your Cart Is Empty</h5>
